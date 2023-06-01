@@ -3,6 +3,7 @@
 PACKAGES=(
     "git"
     "tmux"
+    "htop"
     "zsh"
 )
 
