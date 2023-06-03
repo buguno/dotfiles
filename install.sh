@@ -27,12 +27,15 @@ if ! [ -e ~/.zshrc ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# Instaling Spaceship Prompt
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+# Installing Spaceship Prompt
+if ! [ -d $ZSH_CUSTOM/themes/spaceship-prompt ]; then
+    echo "Installing Spaceship Prompt"
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+fi
 
-# Instaling Zinit
+# Installing Zinit
 if ! [ -d ~/.local/share/zinit ]; then
-    echo "Instaling Zinit"
+    echo "Installing Zinit"
     bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 fi
