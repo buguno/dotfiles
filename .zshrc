@@ -131,3 +131,6 @@ zinit light zsh-users/zsh-completions
 # Go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Poetry
+export PATH="/home/bruno/.local/bin:$PATH"
