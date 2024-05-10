@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Arduino IDE
+Comment=Open-source electronics platform
+Exec=/opt/arduino-ide_2.3.2_Linux_64bit/arduino-ide
+Icon=/opt/arduino-ide_2.3.2_Linux_64bit/resources/app/resources/icons/512x512.png
+Terminal=false
+Type=Application
+Categories=Development;IDE;Electronics;
